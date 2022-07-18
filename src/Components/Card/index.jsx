@@ -12,12 +12,17 @@ function Card({ url }) {
   useEffect(() => {
     data();
   }, []);
+
   return (
     <>
       {pokemonData && (
         <div>
-          <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id}.png`}
+            alt=''
+          />
           <p>{pokemonData.name}</p>
+          <p>{pokemonData.id}</p>
           <button>Detalles</button>
         </div>
       )}

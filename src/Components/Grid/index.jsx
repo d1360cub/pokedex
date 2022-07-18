@@ -4,10 +4,6 @@ import Card from '../Card';
 
 function Grid() {
   const [allPokemons, setAllPokemons] = useState([]);
-  console.log(
-    '🚀 ~ file: index.jsx ~ line 6 ~ Grid ~ allPokemons',
-    allPokemons
-  );
 
   const getPokemons = async () => {
     const { results } = await getAllPokemons();

@@ -4,10 +4,9 @@ import { render_pokemon } from '../../store/actions';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import { Colors } from './Colors';
 
 function PokemonCard({ url }) {
-  const [pokemonData, setPokemonData] = useState([]);
+  const [pokemonData, setPokemonData] = useState({});
   const dispatch = useDispatch();
 
   const data = () => {
@@ -26,19 +25,20 @@ function PokemonCard({ url }) {
 
   return (
     <>
-      {pokemonData && (
+      {pokemonData.name && (
         <Card
-          className='my-3 p-3 rounded text-center shadow p-3 mb-5 bg-white rounded'
-          style={{ width: '15rem' }}
+          className='my-3 p-3 rounded text-center shadow p-1 mb-3 bg-white rounded'
+          style={{ width: '11rem' }}
+          bg={`${pokemonData.types[0].type.name}`}
         >
           <Card.Img
-            style={{ width: '12rem' }}
+            style={{ width: '8rem' }}
             variant='top'
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonData.id}.svg`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id}.png`}
             alt={pokemonData.name}
           />
           <Card.Body
-            className={`${pokemonData.types[0].type.name}rounded text-white`}
+            className={`${pokemonData.types[0].type.name} rounded text-white`}
           >
             <Card.Title as='div'>
               <strong>
@@ -56,22 +56,6 @@ function PokemonCard({ url }) {
             </Button>
           </Card.Body>
         </Card>
-        /*<div className='card__container'>
-          <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonData.id}.svg`}
-            alt={pokemonData.name}
-            className='card__image'
-          />
-          <p>
-            {pokemonData.id}. {pokemonData.name}
-          </p>
-          <div>Height: {pokemonData.height}</div>
-          <div>Weight: {pokemonData.weight}</div>
-          <br />
-          <Button variant='outline-success' onClick={details}>
-            Details
-          </Button>
-        </div>*/
       )}
     </>
   );

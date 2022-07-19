@@ -1,16 +1,15 @@
 import React from 'react';
 import Grid from '../../Components/Grid';
 import Details from '../../Components/Details';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
 
 function Home() {
   return (
     <div>
-      <h1 className='title'>POKEDEX</h1>
-      <h2>First Generation</h2>
-      <div className='container'>
+      <h1 className='title text-center'>POKEDEX</h1>
+      <h2 className='text-center'>First Generation</h2>
+      <Container fluid>
         <Row>
           <Col>
             <Grid />
@@ -19,7 +18,7 @@ function Home() {
             <Details />
           </Col>
         </Row>
-      </div>
+      </Container>
     </div>
   );
 }

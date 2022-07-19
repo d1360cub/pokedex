@@ -26,7 +26,7 @@ function Grid() {
       ) : (
         <Row>
           {allPokemons.map((element) => (
-            <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Col xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card key={element.name} url={element.url} />
             </Col>
           ))}

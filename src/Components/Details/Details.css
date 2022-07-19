@@ -1,7 +1,8 @@
 .pokemon__container {
   position: fixed;
-  top: 150px;
-  right: 18rem;
+  top: 125px;
+  right: 15rem;
+  height: 100%;
 }
 
 .pokemon__name {

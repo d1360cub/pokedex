@@ -33,8 +33,9 @@ function Card({ url }) {
           <p>
             {pokemonData.id}. {pokemonData.name}
           </p>
-          <p>Height: {pokemonData.height}</p>
-          <p>Weight: {pokemonData.weight}</p>
+          <div>Height: {pokemonData.height}</div>
+          <div>Weight: {pokemonData.weight}</div>
+          <br />
           <button onClick={details}>Detalles</button>
         </div>
       )}

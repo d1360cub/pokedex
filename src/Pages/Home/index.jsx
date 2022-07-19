@@ -5,12 +5,16 @@ import './Home.css';
 
 function Home() {
   return (
-    <div className='container'>
-      <div className='container__left'>
-        <Grid />
-      </div>
-      <div className='container__right'>
-        <Details />
+    <div>
+      <h1>POKEDEX</h1>
+      <h2>First Generation</h2>
+      <div className='container'>
+        <div className='container__left'>
+          <Grid />
+        </div>
+        <div className='container__right'>
+          <Details />
+        </div>
       </div>
     </div>
   );

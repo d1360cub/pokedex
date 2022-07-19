@@ -1,0 +1,10 @@
+.container {
+  width: 90%;
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+}
+.container__left,
+.container__right {
+  flex-basis: 50%;
+}

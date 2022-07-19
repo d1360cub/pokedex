@@ -1,0 +1,15 @@
+.pokemon__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon__name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: aliceblue;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 0.2em #87f, 0 0 0.2em #87f, 0 0 0.2em #87f;
+}

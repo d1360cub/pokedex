@@ -1,5 +1,5 @@
 const initialState = {
-  state: [],
+  pokemon: [],
 };
 
 function reducers(state = initialState, action) {
@@ -7,7 +7,7 @@ function reducers(state = initialState, action) {
     case 'RENDER_POKEMON':
       return {
         ...state,
-        state: action.payload,
+        pokemon: action.payload,
       };
     default:
       return state;

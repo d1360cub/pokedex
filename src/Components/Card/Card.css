@@ -1,0 +1,13 @@
+.card__container {
+  gap: 1rem;
+  border: solid cadetblue 1px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card__image {
+  width: 250px;
+  max-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

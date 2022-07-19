@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAllPokemons } from '../../services';
 import Card from '../Card';
+import './Grid.css';
 
 function Grid() {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -17,7 +18,7 @@ function Grid() {
   return (
     <>
       {allPokemons && (
-        <div>
+        <div className='grid'>
           {allPokemons.map((element) => (
             <Card key={element.name} url={element.url} />
           ))}

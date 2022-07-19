@@ -1,5 +1,5 @@
 const initialState = {
-  pokemon: [],
+  pokemon: {},
 };
 
 function reducers(state = initialState, action) {

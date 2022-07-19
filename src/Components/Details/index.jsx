@@ -7,12 +7,14 @@ function Details() {
   return (
     <>
       {!Object.entries(pokemon).length ? (
-        <div className='loading__text'>
+        <div className='loading__text align-middle'>
           <strong>Select a Pokemon for more details...</strong>
         </div>
       ) : (
         <div className='pokemon__container'>
-          <div className='pokemon__name'>{pokemon.name}</div>
+          <div className='pokemon__name'>
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </div>
           <img
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
             alt={pokemon.name}
